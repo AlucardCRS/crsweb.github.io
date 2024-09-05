@@ -54,12 +54,14 @@ h1 {
     border-radius: 5px;
 }
 
+/* Estilos del Tab1 */
 .perfil {
     margin: 20px;
     padding: 20px;
     background-color: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-content: center;
 }
 
 .perfil img {
@@ -77,6 +79,7 @@ h1 {
 .perfil p {
     color: black;
     margin-top: 5px;
+    text-align: center;
 }
 
 .seccion {
@@ -101,6 +104,72 @@ h1 {
     margin: 5px 0;
     text-align: center;
     color: black;
+}
+
+/* Contenedor para Imagenes */
+.contenedor, .contenedor1 {
+    display: flex;
+    flex-direction: row; /* Ordena los elementos en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas nuevas */
+    gap: 30px;
+    margin: 30px;
+  }
+  /*Efecto sobre el texto*/
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  p:hover {
+    color: #007bff; /* Azul claro */
+  }
+  /* Efecto de imágenes */
+.contenedor img {
+    width: 850px;
+    max-width: 850px; /* Limita el ancho máximo */
+    height: 300px; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+/* Efecto hover en imágenes */
+.contenedor img:hover {
+    transform: scale(1.05);
+}
+/* Estilo de encabezados de imágenes */
+.contenedor h2 {
+    --s: 0.1em; /* Grosor de la línea */
+    --c: #2c4bff; /* Color */
+    color: rgb(8, 134, 156);
+    padding-bottom: var(--s);
+    background: 
+        linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) / 200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+    text-align: center;
+}
+.contenedor h2:hover {
+    --_p: 100%;
+}
+.contenedor p {
+    text-align: center;
+}
+/* Media Queries para hacer las imágenes responsivas */
+@media (max-width: 768px) {
+    .contenedor {
+        flex: 1 1 45%; /* Cada imagen ocupará un 45% del contenedor en pantallas medianas */
+    }
+}
+@media (max-width: 480px) {
+    .contenedor {
+        flex: 1 1 100%; /* Cada imagen ocupará el 100% del contenedor en pantallas pequeñas */
+    }
 }
 
 /* Estilos para dispositivos móviles */
