@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página CRS Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Página Web CRS Demo</h1>
+    </header>
+
+    <!-- Contenedor de Tabs -->
+    <div class="tabs">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')" id="defaultOpen">Datos Profesionales</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">CRS Market Place</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">Demo 2</button>
+    </div>
+
+    <!-- Contenido de los Tabs -->
+    <div id="Tab1" class="tabcontent">
+        <h2>Contenido del Tab 1</h2>
+        <p>Este es el contenido de la primera pestaña.</p>
+        <div class='ripple-background'>
+            <div class='circle xxlarge shade1'></div>
+            <div class='circle xlarge shade2'></div>
+            <div class='circle large shade3'></div>
+            <div class='circle mediun shade4'></div>
+            <div class='circle small shade5'></div>
+          </div>
+        <div class="perfil">
+            <img src="https://media.licdn.com/dms/image/v2/C5103AQFoxgMoR4Ihog/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516437370578?e=2147483647&v=beta&t=4ONWYaoH4zb91hkuOd61z2HA7dUpTTyHmryGyBV_aLg" alt="Foto de perfil">
+            <h2>Cristian Rene Severino</h2>
+            <p>Administrador de  Infraestructura</p>
+        </div>
+    
+        <div class="seccion">
+            <h3>Experiencia Laboral</h3>
+            <ul>
+                <li><strong>Desarrollador Frontend</strong> en Empresa XYZ (2021 - Actualidad)</li>
+                <li><strong>Desarrollador Web</strong> en Empresa ABC (2018 - 2021)</li>
+                <li><strong>Practicante</strong> en Startup 123 (2017 - 2018)</li>
+            </ul>
+        </div>
+    
+        <div class="seccion">
+            <h3>Educación</h3>
+            <ul>
+                <li><strong>Ingeniería en Sistemas</strong> - Universidad de la Tecnología (2014 - 2018)</li>
+                <li><strong>Curso de Desarrollo Web</strong> - Academia Online (2016)</li>
+            </ul>
+        </div>
+    
+        <div class="seccion">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Angular, Vue</li>
+                <li>Git, GitHub, CI/CD</li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="Tab2" class="tabcontent">
+        <h2>CRS Market Place</h2>
+        <p>Enlace de Acceso.</p>
+        <div class="contenedor">
+            <div>
+            <div class="agitar">
+            <a href="http://crsmarket.great-site.net/?i=2" title="CRS_Market_Place">
+            <img src="C:\MetaData\1A_ProgramacionWeb\Diseno Web\Web CRS\CRS_Market_Place.png" alt="icono de icon8">
+            </a>
+            <!--<p>Portafolio</p>-->
+            </div>
+            </div>
+    </div>
+
+    <div id="Tab3" class="tabcontent">
+        <h2>Contenido del Tab 3</h2>
+        <p>Este es el contenido de la tercera pestaña.</p>
+    </div>
+
+    <script>
+        // Función para abrir un tab específico
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            // Ocultar todo el contenido de los tabs
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Eliminar la clase 'active' de todos los botones
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Mostrar el contenido del tab seleccionado y agregar la clase 'active' al botón clicado
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abre el primer tab por defecto
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>

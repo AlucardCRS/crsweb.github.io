@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Estilos de Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+.tablinks {
+    background-color: #333;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tablinks:hover {
+    background-color: #555;
+}
+
+.tablinks.active {
+    background-color: #666;
+}
+
+/* Contenido de los Tabs */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+
+.perfil {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.perfil img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.perfil h2 {
+    color: black;
+    margin-top: 10px;
+}
+
+.perfil p {
+    color: black;
+    margin-top: 5px;
+}
+
+.seccion {
+    margin: 20px;
+    padding: 20px;
+    background-color:transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.seccion h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.seccion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.seccion ul li {
+    margin: 5px 0;
+    text-align: center;
+    color: black;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .tablinks {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .tabcontent {
+        margin: 10px;
+        padding: 15px;
+    }
+}
