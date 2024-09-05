@@ -24,6 +24,7 @@ h1 {
     justify-content: center;
     background-color: #333;
     margin: 20px 0;
+    flex-wrap: wrap; /* Permite que las tabs se ajusten en pantallas pequeñas */
 }
 
 .tablinks {
@@ -34,6 +35,7 @@ h1 {
     padding: 14px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    flex: 1; /* Distribuye las tabs equitativamente */
 }
 
 .tablinks:hover {
@@ -107,7 +109,7 @@ h1 {
 }
 
 /* Contenedor para Imagenes */
-.contenedor, .contenedor1 {
+.contenedor {
     display: flex;
     flex-direction: row; /* Ordena los elementos en fila */
     justify-content: center; /* Centra los elementos horizontalmente */
@@ -160,19 +162,17 @@ h1 {
 .contenedor p {
     text-align: center;
 }
-/* Media Queries para hacer las imágenes responsivas */
+/* Media Queries para imágenes responsivas */
 @media (max-width: 768px) {
     .contenedor {
-        flex: 1 1 45%; /* Cada imagen ocupará un 45% del contenedor en pantallas medianas */
+        flex-direction: column; /* Coloca las imágenes una debajo de la otra */
     }
-}
-@media (max-width: 480px) {
-    .contenedor {
-        flex: 1 1 100%; /* Cada imagen ocupará el 100% del contenedor en pantallas pequeñas */
+    .contenedor img {
+        width: 100%;
     }
 }
 
-/* Estilos para dispositivos móviles */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
     .tablinks {
         padding: 10px;
@@ -183,4 +183,43 @@ h1 {
         margin: 10px;
         padding: 15px;
     }
+
+    .perfil img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil h2 {
+        font-size: 18px;
+    }
+
+    .seccion {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .contenedor img {
+        width: 100%;
+    }
 }
+
+/* Ajustes para pantallas muy pequeñas (480px o menos) */
+@media (max-width: 480px) {
+    .tablinks {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .tabcontent {
+        padding: 10px;
+    }
+
+    .contenedor {
+        gap: 15px;
+    }
+
+    .seccion {
+        padding: 8px;
+    }
+}
+
